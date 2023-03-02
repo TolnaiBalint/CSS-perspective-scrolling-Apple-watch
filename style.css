@@ -64,6 +64,8 @@ body {
     font-size: 100%;
     line-height: 1.5;
     color: #787878;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @media (max-width: 600px) {
@@ -96,6 +98,7 @@ strong {
     background-color: #f0f0f0;
     perspective: 150rem;
     perspective-origin: 50% 110%;
+    -webkit-overflow-scrolling: touch;
 }
 
 .item-3d {
@@ -131,6 +134,8 @@ strong {
     transform-origin: 50% 100%;
     transform: rotateX(70deg);
     transform-style: preserve-3d; 
+    -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .ground::before,
@@ -169,11 +174,15 @@ strong {
 .item-3d:nth-child(even) .ground::before {
     background-position: 100% 50%;
     animation: floating-shadow-r 5s -1s infinite;
+    -webkit-animation: floating-shadow-r 5s -1s infinite;
+            animation: floating-shadow-r 5s -1s infinite;
 }
 
 .item-3d:nth-child(odd) .ground::before {
     background-position: 0 50%;
     animation: floating-shadow-l 5s -1s infinite;
+    -webkit-animation: floating-shadow-l 5s -1s infinite;
+            animation: floating-shadow-l 5s -1s infinite;
 }
 
 @-webkit-keyframes floating-shadow-l {
@@ -249,6 +258,8 @@ strong {
     width: 50%;
     transform-origin: 50% 50%;
     animation: floating 5s -1s infinite;
+    -webkit-animation: floating 5s -1s infinite;
+            animation: floating 5s -1s infinite;
 }
 
 .item-img img {
